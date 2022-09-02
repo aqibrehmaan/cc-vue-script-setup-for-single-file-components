@@ -1,11 +1,10 @@
 <template>
-    {{ pluralize('cat', count, true) }}
+    {{ plural('cat', 5, true) }}
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { meow as greeting } from './helper'
     import pluralize from 'pluralize'
-
-    const count = ref(2);
+    const plural = pluralize
 
 </script>
