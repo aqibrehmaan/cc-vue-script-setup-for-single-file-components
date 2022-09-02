@@ -1,8 +1,11 @@
 <template>
-   <Greeting />
+    {{ pluralize('cat', count, true) }}
 </template>
 
 <script setup>
-    import Greeting from './components/Greeting.vue';
-    
+    import { ref } from 'vue'
+    import pluralize from 'pluralize'
+
+    const count = ref(2);
+
 </script>
