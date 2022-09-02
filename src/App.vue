@@ -1,8 +1,11 @@
 <template>
-  <Button title="Click me" />
+  <Emit v-on:clicked="handleClick" />
 </template>
 
 <script setup>
-   import Button from './components/Button.vue'
+   import Emit from './components/Emit.vue'
 
+   const handleClick = (e) => {
+      console.log(e);
+   }
 </script>
