@@ -1,11 +1,16 @@
 <template>
-  <Emit v-on:clicked="handleClick" />
+   <suspense>
+      <template #default>
+          <Todos />
+      </template>
+
+      <template #fallback>
+          Loading...
+      </template>
+
+   </suspense>
 </template>
 
 <script setup>
-   import Emit from './components/Emit.vue'
-
-   const handleClick = (e) => {
-      console.log(e);
-   }
+    import Todos from './components/Todos.vue'
 </script>
