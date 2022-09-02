@@ -1,14 +1,8 @@
 <template>
-    {{ authenticated }}
-    <button v-on:click="meow">Meow</button>
+   <Greeting />
 </template>
 
 <script setup>
-  import { ref } from 'vue';
-
-  const authenticated = ref(false);
-  const meow = () => {
-     authenticated.value = true;
-  }
-
+    import Greeting from './components/Greeting.vue';
+    
 </script>
