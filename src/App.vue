@@ -1,10 +1,12 @@
 <template>
-    {{ plural('cat', 5, true) }}
+   <Form.Input />
+   <Form.Textarea />
 </template>
 
 <script setup>
-    import { meow as greeting } from './helper'
-    import pluralize from 'pluralize'
-    const plural = pluralize
+    // import Input from './components/form/Input.vue'
+    // import Textarea from './components/form/Textarea.vue'
+
+    import * as Form from './components/form/form'
 
 </script>
